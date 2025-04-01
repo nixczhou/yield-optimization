@@ -37,6 +37,8 @@
 - Dynamic control limits for changing processes
 - Advanced anomaly detection algorithms (e.g., DBSCAN, Autoencoders).
 - Multivariate control limits to account for parameter correlations.
+ - Instead of calculating control limits for each parameter independently, use multivariate techniques to account for correlations between parameters.
+ - Example: Use Principal Component Analysis (PCA) to reduce dimensionality and detect anomalies in the transformed space.
 - Bayesian optimization for direct yield maximization.
 - Clustering-based control for pattern recognition.
  - Use clustering algorithms (e.g., K-Means) to group data into clusters and identify clusters with poor yield.
