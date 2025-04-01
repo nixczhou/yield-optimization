@@ -1,5 +1,8 @@
 # Improving Yield with Anomaly Detection & Control Limit Tightening
 
+#### Idea
+By removing anomalies and tightening control limits, aiming to reduce variability and improve yield.
+
 #### 1. Comparing ML Anomalies with Statistical Control Limits
 - **Scenario 1**: If ML detects anomalies **outside** the initial control limits (mean ± 3σ), it confirms that the limits are reasonable.
 - **Scenario 2**: If ML detects anomalies **inside** the initial control limits, it suggests that the statistical limits may need tightening.
