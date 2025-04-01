@@ -33,5 +33,21 @@
 - Recalculate control limits using only non-anomalous data.
 - Optimize yield by recommending new parameter settings.
 
+#### More Approach:
+- Dynamic control limits for changing processes
+- Advanced anomaly detection algorithms (e.g., DBSCAN, Autoencoders).
+- Multivariate control limits to account for parameter correlations.
+- Bayesian optimization for direct yield maximization.
+- Clustering-based control for pattern recognition.
+ - Use clustering algorithms (e.g., K-Means) to group data into clusters and identify clusters with poor yield.
+ - Define control limits based on the "good" clusters.
+
+#### Which Method to Choose?
+- If your process is stable: Your current method (statistical + Isolation Forest) is likely sufficient.
+- If your process is dynamic: Consider dynamic control limits or Bayesian optimization.
+- If parameters are correlated: Use multivariate techniques like PCA or clustering.
+- If you want to explore alternatives: Try DBSCAN, One-Class SVM, or Autoencoders for anomaly detection.
+
+
 ---
 **Note**: The above steps provide a systematic approach to improve yield by leveraging ML-based anomaly detection and data-driven control limit adjustments.
