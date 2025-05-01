@@ -1,4 +1,4 @@
-# Improving Yield with Anomaly Detection & Control Limit Tightening
+# Yield Optimization
 
 #### Idea
 By removing anomalies and tightening control limits, aiming to reduce variability and improve yield.
