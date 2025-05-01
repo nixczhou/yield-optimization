@@ -1,5 +1,8 @@
 # Improving Yield with Anomaly Detection & Control Limit Tightening
 
+#### Idea
+By removing anomalies and tightening control limits, aiming to reduce variability and improve yield.
+
 #### 1. Comparing ML Anomalies with Statistical Control Limits
 - **Scenario 1**: If ML detects anomalies **outside** the initial control limits (mean ± 3σ), it confirms that the limits are reasonable.
 - **Scenario 2**: If ML detects anomalies **inside** the initial control limits, it suggests that the statistical limits may need tightening.
@@ -37,8 +40,15 @@
 - Dynamic control limits for changing processes
 - Advanced anomaly detection algorithms (e.g., DBSCAN, Autoencoders).
 - Multivariate control limits to account for parameter correlations.
- - Instead of calculating control limits for each parameter independently, use multivariate techniques to account for correlations between parameters.
- - Example: Use Principal Component Analysis (PCA) to reduce dimensionality and detect anomalies in the transformed space.
+    - Instead of calculating control limits for each parameter independently, use multivariate techniques to account for correlations between parameters.
+    - Example: Use Principal Component Analysis (PCA) to reduce dimensionality and detect anomalies in the transformed space.
+    -  ````python
+        from sklearn.decomposition import PCA
+        pca = PCA(n_components=2)
+        transformed_data = pca.fit_transform(data.iloc[:, :-1])
+        iso_forest = IsolationForest(contamination=0.05, random_state=42)
+        data['PCA_Anomaly'] = iso_forest.fit_predict(transformed_data) == -1
+        ````
 - Bayesian optimization for direct yield maximization.
 - Clustering-based control for pattern recognition.
  - Use clustering algorithms (e.g., K-Means) to group data into clusters and identify clusters with poor yield.
